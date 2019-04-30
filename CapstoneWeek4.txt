@@ -1,0 +1,12 @@
+1.Introduction /Business Problem
+The World Cities Organization has initiated a project to profile major cities of the world and compare them based on certain attributes like cuisine, history, culture etc. As a part of this initiative, the author has been assigned a sub-project to compare and contrast two cities: New York and Paris. These two cities will be profiled based on neigbourhoods and compared based on the most common venues. 
+The stakeholders of this project are: 
+A) The City Councils of the two cities: They would like to know about their most common venues. This would help them decide which construction projects to invest in and which venues to maintain.
+B) Prospective investors of the two cities: They would like to know about their most common venues. This would help them decide which kind of businesses are popular, which markets are saturated and where the opportunities to invest in, and other such aspects. 
+C) Researchers:   They would like to compare two major world cities to see the similarities and differences between them and also to analyze the reasons for such similarities and differences.
+   
+ 
+2. Data
+All the data needed to undertake this project will be sourced for FourSquare, the premiere location data provider. The data will be sourced for both cities from this website. For this a developer account is created with FourSquare and calls will be made using the RESTful APIs to get the location data. Such data collected will be subjected to data wrangling, cleansing and processing to be made fit for purpose for creating models for unsupervised machine learning.The technique used for modeling will be k-means clustering. The models will be created using Coursera's Cognitive Class labs. The profiling will be done based on clusters for each city and then the clusters of the two cities can be compared and contrasted. The Folium library will be used extensively to generate the location maps. 
+
+ 
