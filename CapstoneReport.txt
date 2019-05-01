@@ -1,0 +1,40 @@
+1.Introduction /Business Problem
+The World Cities Organization has initiated a project to profile major cities of the world and compare them based on certain attributes like cuisine, history, culture etc. As a part of this initiative, the author has been assigned a sub-project to compare and contrast two major boroughs of New York: Manhattan and Bronx. These two boroughs will be profiled based on neighbourhoods and compared based on the most common venues. 
+The stakeholders of this project are: 
+A) The City Council of New York: They would like to know about their most common venues. This would help them decide which construction projects to invest in and which venues to maintain.
+B) Prospective investors of the two boroughs: They would like to know about their most common venues. This would help them decide which kind of businesses are popular, which markets are saturated and where the opportunities to invest in, and other such aspects. 
+C) Researchers:   They would like to compare two major boroughs to see the similarities and differences between them and also to analyze the reasons for such similarities and differences.
+   
+
+2. Data
+The data needed to undertake this project will be sourced from https://cocl.us/new_york_dataset; a dataset containing data about the whole of New York. In addition, further location data will be sourced from FourSquare, the premiere location data provider. The data will be sourced for both cities from this website. For this a developer account is created with FourSquare and calls will be made using the RESTful APIs to get the location data. Such data collected will be subjected to data wrangling, cleansing and processing to be made fit for purpose for creating models for unsupervised machine learning. The technique used for modeling will be k-means clustering. The models will be created using Coursera's Cognitive Class labs. The profiling will be done based on clusters for each city and then the clusters of the two cities can be compared and contrasted. The Folium library will be used extensively to generate the location maps. 
+
+3. Methodology
+The problem at hand is a problem of unsupervised learning, as it is about clustering neighbourhoods based on common features. The data obtained from https://cocl.us/new_york_dataset. The data thus obtained is in the form of a JSON file. This data was preprocessed before any analysis could be done on it. Such preprocessing included the following: renaming columns to meaningful names, and creating maps to visualize the data. Next location data about venues was obtained by making RESTful API calls to FourSquare. The resulting data was again subjected to preprocessing like renaming columns, one-hot encoding to convert categorical variables to numeric ones etc.  Next, the data for the two boroughs, namely Manhattan and Bronx, to be compared and contrasted was chosen. Next,  exploratory data analysis was done by grouping the data by neighbourhoods to see the different venues in the two different boroughs. 
+Finally, the machine learning technique was decided to be 'k-means clustering'. This algorithm was found to be the most suitable to cluster neighbourhoods of the two boroughs to compare and contrast the most common venues.
+
+4. Results
+After applying the machine learning technique 'k-means clustering' on both boroughs, the result was compiled and displayed in 2X2 matrix/ tables which showed the most common venues in the different clusters of a)Manhattan vs b) Bronx. The results of the analysis are clearly shown in the output of the code for the analysis of the two boroughs and provided in the CapstoneCode.ipynb file submitted with this report. 
+
+5. Discussion
+
+Similarities between the two boroughs:
+For Manhattan, it was found that in all clusters across the neighbourhoods, the most common (no 1) venue was typically eateries. However, a special mention can be made about the cluster with neighbourhoods like Midtown, Lincoln Square, Battery Park City where the most common (no 1) venues were parks, theatres, concert halls.
+Again for Bronx, it was it was found that in all clusters across the neighbourhoods, the most common (no 1) venue was typically eateries. However, a special mention can be made about the cluster with a single neighbourhood Fieldston where the   most common (no 1) venue was a Plaza. 
+
+Differences between the two boroughs:
+However, a clear difference can be seen between the common venues of Manhattan and Bronx. While Manhattan has a range of common venues from theatres to concert halls to French restaurants, Bronx is fairly limited in its range of venues which are typically eateries. Another thing to be noted is when eateries are concerned, Manhattan has clusters which are very diverse with its dining venues ranging from French to Mexican, to Seafood to Spanish cuisines. However, this is not the case with Bronx: here almost all common venues are Pizza places or Delis.
+
+Conclusion
+This report analyzed two prime boroughs of one of the largest cities of the world: New York. This was done by profiling based on neighbourhoods and compared based on the most common venues across neighbourhoods. It was found that Manhattan had neighbourhoods which were very diverse in terms of their popular venues, while Bronx had neighbourhoods which were fairly uniform in terms of their popular venues. So it can be said that Manhattan is culturally richer than Bronx. Also, it was noted that while dining places are found to be the most common venues in both Manhattan and Bronx, the dining options are way more diverse and expensive in Manhattan, as compared to Bronx. It can be attributed to the financial affluence of people (both residents and tourists) in Manhattan as compared to the people in Bronx.
+So following recommendations can be made:
+a) Build more diverse venues in Bronx to make it culturally richer and more attractive to tourists
+b) Build more dining options near the places of interest in the cluster with neighbourhoods like Midtown, Lincoln Square, Battery Park City
+
+
+
+
+
+
+
+
